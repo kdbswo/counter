@@ -12,12 +12,18 @@ class MainActivity : AppCompatActivity() {
 
         val countBtn = findViewById<Button>(R.id.countBtn)
         val countText = findViewById<TextView>(R.id.countText)
-        var count = 0
 
-        countText.text = count.toString()
+        val sharedPreference = getSharedPreferences("number", 0)
+        val editor = sharedPreference.edit()
+        val saveNumber = sharedPreference.getInt("count", 0).toString()
+        countText.text = saveNumber
+        var count = saveNumber.toInt()
+
         countBtn.setOnClickListener {
             count += 1
             countText.text = count.toString()
+            editor.putInt("count", count)
+            editor.apply()
         }
     }
 }

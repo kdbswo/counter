@@ -10,5 +10,7 @@
     <color name="background">#f0f8ff</color>
     <color name="btnTopColor">#2acaea</color>
     <color name="btnBottomColor">#0a75ad</color>
+    <color name="minusBtnBottomColor">#E50000</color>
+    <color name="minusBtnTopColor">#5b0000</color>
 
 </resources>

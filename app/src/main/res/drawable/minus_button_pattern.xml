@@ -3,16 +3,14 @@
     <item android:state_pressed="true" >
         <shape>
             <gradient
-                android:startColor="@color/btnBottomColor"
-                android:endColor="@color/btnBottomColor"
+                android:startColor="@color/minusBtnBottomColor"
+                android:endColor="@color/minusBtnBottomColor"
                 android:angle="270" />
             <stroke
                 android:width="0dp"
                 android:color="#0a75ad" />
             <corners
-                android:topRightRadius="250dp"
-                android:bottomLeftRadius="250dp"
-                android:radius="200dp" />
+                android:radius="145dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"
@@ -48,14 +46,18 @@
     <item>
         <shape>
             <gradient
-                android:startColor="@color/btnTopColor"
-                android:endColor="@color/btnBottomColor"
+                android:startColor="@color/minusBtnTopColor"
+                android:endColor="@color/minusBtnBottomColor"
                 android:angle="90" />
             <stroke
                 android:width="0dp"
                 android:color="#14B61A" />
             <corners
-                android:radius="150dp" />
+                android:topLeftRadius="120dp"
+                android:bottomRightRadius="120dp"
+                android:radius="150dp"
+
+                />
             <padding
                 android:left="10dp"
                 android:top="10dp"

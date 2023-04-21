@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val countBtn = findViewById<Button>(R.id.countBtn)
         val countText = findViewById<TextView>(R.id.countText)
+        val resetBtn = findViewById<TextView>(R.id.resetBtn)
         var count = 0
 
         countText.text = count.toString()
@@ -19,5 +20,11 @@ class MainActivity : AppCompatActivity() {
             count += 1
             countText.text = count.toString()
         }
+
+        resetBtn.setOnClickListener {
+            count = 0
+            countText.text = count.toString()
+        }
+
     }
 }

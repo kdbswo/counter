@@ -2,5 +2,6 @@
     <string name="app_name">+1</string>
     <string name="_1">+1</string>
     <string name="_2">-1</string>
-    <string name="_12">12</string>
+    <string name="_0">0</string>
+    <string name="reset">reset</string>
 </resources>

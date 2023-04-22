@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         resetBtn.setOnClickListener {
             count = 0
             countText.text = count.toString()
+            editor.putInt("count", count)
+            editor.apply()
         }
 
     }

@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    
+
     private var count = 0
 
     @SuppressLint("ServiceCast")
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val countBtn = findViewById<Button>(R.id.countBtn)
         val minusBtn = findViewById<Button>(R.id.minusBtn)
         val countText = findViewById<TextView>(R.id.countText)
-        val resetBtn = findViewById<TextView>(R.id.resetBtn)
+        val resetBtn = findViewById<ImageButton>(R.id.resetBtn)
         val toggleBtn = findViewById<SwitchCompat>(R.id.vibrateSwitch)
 
         val sharedPreference = getSharedPreferences("prf", 0)

@@ -5,4 +5,5 @@
     <string name="_0">0</string>
     <string name="reset">reset</string>
     <string name="진동">진동</string>
+    <string name="set_vibrate">set vibrate</string>
 </resources>

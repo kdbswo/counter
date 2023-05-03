@@ -11,10 +11,13 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
+    private var liveText: MutableLiveData<String> = MutableLiveData()
     private var count = 0
 
     @SuppressLint("ServiceCast")
@@ -38,7 +41,10 @@ class MainActivity : AppCompatActivity() {
         val editor = sharedPreference.edit()
 
         count = sharedPreference.getInt("count", 0)
-        countText.text = count.toString()
+
+        fun setLiveData() {
+            liveText.value = count.toString()
+        }
 
         fun onPressVibrate() {
             // API level 26
@@ -57,24 +63,30 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        setLiveData()
+
+        liveText.observe(this, Observer {
+            countText.text = it
+        })
+
+
         countBtn.setOnClickListener {
             count++
-            countText.text = count.toString()
+            setLiveData()
             onPressVibrate()
         }
 
         minusBtn.setOnClickListener {
             count--
-            countText.text = count.toString()
+            setLiveData()
             onPressVibrate()
         }
 
         resetBtn.setOnClickListener {
             count = 0
-            countText.text = count.toString()
+            setLiveData()
             onPressVibrate()
         }
-
 
         toggleBtn.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {

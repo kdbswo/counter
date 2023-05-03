@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val editor = sharedPreference.edit()
 
         count = sharedPreference.getInt("count", 0)
+
         countText.text = count.toString()
 
         fun onPressVibrate() {

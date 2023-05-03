@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreference = getSharedPreferences("prf", 0)
         val editor = sharedPreference.edit()
 
+
         count = sharedPreference.getInt("count", 0)
 
         countText.text = count.toString()
